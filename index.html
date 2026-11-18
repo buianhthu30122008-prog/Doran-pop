@@ -186,6 +186,11 @@ body{background:#f0f2ee}
 <dialog class="sheet" id="archiveDialog"><button class="close" data-close="archiveDialog" aria-label="닫기">×</button><h1 id="archiveTitle"></h1><div class="archive-images" id="archiveImages"></div></dialog>
 <dialog id="viewer"><button class="close" data-close="viewer" aria-label="사진 닫기">×</button><div id="viewerContent"></div></dialog>
 <script src="data.js"></script><script src="archive.js"></script><script src="media.js"></script><script src="stickers.js"></script><script>
+// GitHub에 media/archive 파일을 저장소 최상위로 올린 구조에 맞춘다.
+const flattenPath=path=>path.replace(/^(media|archive)\//,'');
+for(const key in window.POP_DATA.assets)window.POP_DATA.assets[key]=flattenPath(window.POP_DATA.assets[key]);
+for(const list of Object.values(window.POP_ARCHIVE))for(const item of list)item.path=flattenPath(item.path);
+for(const item of window.POP_MEDIA)item.path=flattenPath(item.path);
 const $=s=>document.querySelector(s);
 const {groups,assets}=window.POP_DATA;
 const archive=window.POP_ARCHIVE;
