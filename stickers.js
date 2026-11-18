@@ -1,0 +1,62 @@
+window.POP_STICKER_PACKS=[
+  {
+    "title": "DORAN",
+    "icon": "stickers/pack1-02.png",
+    "items": [
+      "stickers/pack1-01.png",
+      "stickers/pack1-02.png",
+      "stickers/pack1-03.png",
+      "stickers/pack1-04.png",
+      "stickers/pack1-05.png",
+      "stickers/pack1-06.png",
+      "stickers/pack1-07.png",
+      "stickers/pack1-08.png",
+      "stickers/pack1-09.png",
+      "stickers/pack1-10.png",
+      "stickers/pack1-11.png",
+      "stickers/pack1-12.png",
+      "stickers/pack1-13.png",
+      "stickers/pack1-14.png",
+      "stickers/pack1-15.png",
+      "stickers/pack1-16.png",
+      "stickers/pack1-17.png",
+      "stickers/pack1-18.png",
+      "stickers/pack1-19.png",
+      "stickers/pack1-20.png",
+      "stickers/pack1-21.png",
+      "stickers/pack1-22.png",
+      "stickers/pack1-23.png",
+      "stickers/pack1-24.png"
+    ]
+  },
+  {
+    "title": "어차피 우승은 도란",
+    "icon": "stickers/pack2-02.png",
+    "items": [
+      "stickers/pack2-01.png",
+      "stickers/pack2-02.png",
+      "stickers/pack2-03.png",
+      "stickers/pack2-04.png",
+      "stickers/pack2-05.png",
+      "stickers/pack2-06.png",
+      "stickers/pack2-07.png",
+      "stickers/pack2-08.png",
+      "stickers/pack2-09.png",
+      "stickers/pack2-10.png",
+      "stickers/pack2-11.png",
+      "stickers/pack2-12.png",
+      "stickers/pack2-13.png",
+      "stickers/pack2-14.png",
+      "stickers/pack2-15.png",
+      "stickers/pack2-16.png",
+      "stickers/pack2-17.png",
+      "stickers/pack2-18.png",
+      "stickers/pack2-19.png",
+      "stickers/pack2-20.png",
+      "stickers/pack2-21.png",
+      "stickers/pack2-22.png",
+      "stickers/pack2-23.png",
+      "stickers/pack2-24.png"
+    ]
+  }
+];
