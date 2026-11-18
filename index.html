@@ -145,7 +145,10 @@ body{background:#f0f2ee}
 #mediaDialog[open]{display:flex;flex-direction:column;overflow:hidden}
 #mediaDialog .media-header{position:relative;flex:none;padding-bottom:10px}
 #mediaDialog .media-header .close{top:-6px;right:-6px}
-#gallery{min-height:0;overflow:auto;overscroll-behavior:contain}
+.media-scroll{min-height:0;overflow:auto;overscroll-behavior:contain}
+#gallery{grid-template-columns:repeat(3,minmax(0,1fr));align-content:start}
+#gallery button{display:block;width:100%;min-width:0}
+#gallery img,#gallery video{position:absolute;inset:0;display:block}
 #viewer{overflow:hidden}
 #viewer .close{position:fixed;right:max(12px,env(safe-area-inset-right))}
 
@@ -189,7 +192,7 @@ body{background:#f0f2ee}
 <dialog class="sheet pop-bottom-sheet" id="settings"><div class="sheet-handle"></div><button class="close" data-close="settings" aria-label="닫기">×</button><div class="profile-card"><button id="profilePhoto" aria-label="프로필 사진 확대"><img src="avatar.png" alt=""></button><h1>최현준임</h1><small id="profileDays"></small></div><div class="profile-library"><span>보관함</span><button id="openMediaMini">전체보기</button></div><div id="mediaStrip"></div><button class="menu" id="changeName">닉네임 변경</button><button class="menu" id="openHearts">하트 모아보기</button><button class="menu" id="language">번역 설정</button><button class="menu" id="openMedia">사진 · 영상</button><button class="menu" id="openProfiles">프로필 사진</button><button class="menu" id="openBackgrounds">배경 사진</button></dialog>
 <dialog class="sheet" id="dates"><button class="close" data-close="dates" aria-label="닫기">×</button><h1>달력</h1><div class="calnav"><button id="prevMonth" aria-label="이전 달">‹</button><div class="calendar-selectors"><select id="calendarYear" aria-label="연도"></select><select id="calendarMonth" aria-label="월"></select></div><button id="nextMonth" aria-label="다음 달">›</button></div><div class="week"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div><div id="calendar"></div><p id="calendarHint">점이 있는 날짜를 누르면 그날 대화로 이동합니다.</p><button class="primary" id="jumpLatest" type="button">마지막 팝으로</button></dialog>
 <dialog class="sheet" id="searchDialog"><button class="close" data-close="searchDialog" aria-label="닫기">×</button><h1>대화 검색</h1><input id="query" aria-label="검색어" placeholder="검색어 입력" autocomplete="off"><p id="resultCount" aria-live="polite"></p><div id="searchResults"></div></dialog><dialog class="sheet" id="translation"><button class="close" data-close="translation" aria-label="닫기">×</button><h1>번역 설정</h1><p id="translationIntro">한국어 원문 아래에 영어 번역을 표시합니다.</p><p id="translationHelp" hidden>이 브라우저에서는 말풍선 아래 자동 번역을 지원하지 않아요. 아이폰 Safari에서는 주소창 왼쪽의 페이지 메뉴에 ‘영어로 번역’이 표시될 때 페이지 전체를 번역할 수 있어요.</p><button class="primary" id="toggleEnglish" type="button" aria-pressed="false">영어 자동 번역 켜기</button><p id="translationStatus" aria-live="polite"></p></dialog>
-<dialog class="sheet" id="mediaDialog" aria-labelledby="mediaTitle"><header class="media-header"><h1 id="mediaTitle">사진 · 영상</h1><button class="close" data-close="mediaDialog" aria-label="사진·영상 목록 닫기">×</button></header><div id="gallery"></div></dialog>
+<dialog class="sheet" id="mediaDialog" aria-labelledby="mediaTitle"><header class="media-header"><h1 id="mediaTitle">사진 · 영상</h1><button class="close" data-close="mediaDialog" aria-label="사진·영상 목록 닫기">×</button></header><div class="media-scroll"><div id="gallery"></div></div></dialog>
 <dialog class="sheet" id="archiveDialog"><button class="close" data-close="archiveDialog" aria-label="닫기">×</button><h1 id="archiveTitle"></h1><div class="archive-images" id="archiveImages"></div></dialog>
 <dialog id="viewer"><button class="close" data-close="viewer" aria-label="사진·영상 보기 닫기">×</button><div id="viewerContent"></div></dialog>
 <script src="data.js"></script><script src="archive.js"></script><script src="media.js"></script><script src="stickers.js"></script><script>
